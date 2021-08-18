@@ -8,7 +8,7 @@ def connectToInfluxDB(datas):
     org = "Emot"
     bucket = "test"
 
-    client = InfluxDBClient(url="http://localhost:8086", token=token, org=org)
+    client = InfluxDBClient(url="http://134.209.150.215", token=token, org=org)
 
     write_api = client.write_api(write_options=SYNCHRONOUS)
 
