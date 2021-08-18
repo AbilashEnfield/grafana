@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'GID.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Drf_grafana',
-        'USER': 'postgres',
+        'NAME': 'django_db',
+        'USER': 'abilash',
         'PASSWORD': '7373',
         'HOST': 'localhost',
         'PORT': '5432',
