@@ -6,4 +6,4 @@ class Datas(models.Model):
     time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.time
+        return str(self.id)
