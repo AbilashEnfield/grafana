@@ -25,6 +25,6 @@ def data_slicer(data):
 
     # print(df)
 
-    df.to_excel('dict1.xlsx')
+    # df.to_excel('dict1.xlsx')
 
     return final_data
