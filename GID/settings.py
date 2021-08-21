@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'GID.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'emot_db',
+        'NAME': 'emot_data',
         'USER': 'abilash',
         'PASSWORD': '7373',
         'HOST': 'localhost',
