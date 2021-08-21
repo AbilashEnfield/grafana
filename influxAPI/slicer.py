@@ -2,6 +2,7 @@ import pandas as pd
 
 
 def data_slicer(data):
+    print(data)
     rawSplit = data.split("&")
     splited_data_list = []
     for item in rawSplit:

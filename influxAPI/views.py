@@ -2,12 +2,13 @@ from django.shortcuts import render
 from .connector import *
 from .slicer import data_slicer
 from .models import Datas
+from datetime import datetime
 
-
-# Create your views here.
 
 def getData(request, rdata):
     processed_data = data_slicer(rdata)
+    formatted_time = datetime.strptime(processed_data["time"], '%d/%m/%y %H:%M:%S')
+    print(formatted_time)
 
     Datas.objects.create(
         header=processed_data["vii-pxpy-uqaheader"],
@@ -44,11 +45,12 @@ def getData(request, rdata):
 
 def rawData(request, rdata):
     processed_data = data_slicer(rdata)
+    formatted_time = datetime.strptime(processed_data["time"], '%d:%m:%Y,%H:%M:%S')
     Datas.objects.create(
         header=processed_data["vii-pxpy-uqaheader"],
         customer_id=processed_data["id"],
         imei_number=processed_data["imei"],
-        time=processed_data["time"],
+        time=formatted_time,
         di1=processed_data["di1"],
         di2=processed_data["di2"],
         di3=processed_data["di3"],

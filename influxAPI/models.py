@@ -1,11 +1,12 @@
 from django.db import models
+from datetime import datetime
 
 
 class Datas(models.Model):
     header      = models.TextField(null=True, blank=True)
     customer_id = models.TextField(null=True, blank=True)
     imei_number = models.TextField(null=True, blank=True)
-    time        = models.TextField(null=True, blank=True)
+    time        = models.DateTimeField(null=True, blank=True, default=datetime.now())
     di1         = models.TextField(null=True, blank=True)
     di2         = models.TextField(null=True, blank=True)
     di3         = models.TextField(null=True, blank=True)
